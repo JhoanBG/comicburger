@@ -1,0 +1,183 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor del icono y el texto */
+.start-container {
+    text-align: center;
+}
+
+.imagen-container {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    animation: slideIn 0.5s ease forwards;
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurarse de que la imagen cubra todo el contenedor */
+    
+}
+
+.chat-container {
+    
+    max-width: 200px;
+    max-height: 80%; /* Altura máxima del contenedor */
+    margin-top: auto; /* Ajusta según sea necesario */
+    margin-right: 20px; /* Margen desde el borde derecho */
+    overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es demasiado grande */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: fixed;
+    display: none; /* Oculta el contenedor del chat por defecto */
+    right: 20px; /* Ajusta el valor según sea necesario */
+    transform: translateY(-50%);
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Alineación del texto a la derecha */
+.chat-container p {
+    text-align: right;
+    display: none;
+}
+/* Estilos para el ícono del chat */
+.chat-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999; /* Asegura que el ícono esté por encima de otros elementos */
+    text-align: center;
+}
+
+.chat-icon-container img {
+    width: 50px; /* Tamaño del ícono */
+    height: auto;
+}
+
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.product {
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.product img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.ingredients {
+    display: none;
+}
+
+.ingredients p {
+    margin-top: 5px;
+}
+
+/* Agrega estilos para el icono del chat */
+
+    
+
+.chat-icon-container img {
+    width: 80%;
+    height: auto;
+}
+
+.selected {
+    background-color: green; /* Cambiar color de fondo cuando se seleccione */
+    color: white; /* Cambiar color del texto para que sea legible */
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.header-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+.header-buttons img {
+    width: 30px; /* Tamaño de las imágenes */
+    height: auto;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .chat-container {
+        max-width: 90%;
+    }
+
+    #user-input {
+        width: calc(100% - 70px);
+    }
+}
+/* Animación al enviar un mensaje */
+.message {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

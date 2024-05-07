@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Comic Burguer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Menú de Comic Burguer</h1>
+        <div class="header-buttons">
+            <button onclick="window.location.href='entradas.html'"><img src="entradas-icon.png" alt="Entradas">Entradas</button>
+            <button onclick="window.location.href='bebidas.html'"><img src="bebidas-icon.png" alt="Bebidas">Bebidas</button>
+        </div>
+    </header>
+    <div class="imagen-container">
+        <img id="background-image" src="logo.png" alt="Fondo de imagen">
+    </div>
+    <div class="container ">
+        <div class="row justify-center">
+            <div class="product" onclick="selectProduct('mazinger', 'MAZINGER', 17900)">
+                <div class="product-details" >
+                    <img src="mazinger.jfif" alt="mazinger">
+                    <span>MAZINGER </span>
+                </div>
+            </div>
+            
+            <!-- Agregar más productos aquí -->
+        </div>
+    </div>
+    <div id="selected-product" class="selected-product-container" style="display: none;">
+        <span id="selected-product-name"></span>
+        <div id="selected-product-ingredients">
+            <p>Hamburguesa tradicional con ingredientes de calidad. 125 gr de blend 100% res, pan esponjoso, queso cheddar, pepinillos y salsas. Opcionales: Cebolla y tomate</p>
+            <p>Ingredientes:</p>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Carne" checked> Carne</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Queso" checked> Queso</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Pepinillos" checked> Pepinillos</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Salsas" checked> Salsas</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Cebolla" data-price="100"> Cebolla (opcional) - 100</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Tomate" data-price="200"> Tomate (opcional) - 200</label>
+            </div>
+        </div>
+        <input type="number" id="selected-product-quantity" value="1" min="1">
+        <button id="order-button" onclick="orderSelectedProduct()">Ordenar</button>
+    </div>
+ 
+    <div class="container">
+        <div class="row justify-center">
+            <div class="product" onclick="selectProduct('mafalda', 'MAFALDA', 26900)">
+                <div class="product-details" >
+                    <img src="mafalda.jfif" alt="mafalda">
+                    <span>MAFALDA</span>
+                </div>
+            </div>
+            
+            <!-- Agregar más productos aquí -->
+        </div>
+    </div>
+    <div id="selected-product" class="selected-product-container" style="display: none;">
+        <span id="selected-product-name"></span>
+        <div id="selected-product-ingredients">
+            <p>125 gr de blend 100% res, pan esponjoso, queso tajado, chorizo argentino, guacamole y salsas</p>
+            <p>Ingredientes:</p>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Carne" checked> Carne</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Queso" checked> Queso</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Pepinillos" checked> Pepinillos</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Salsas" checked> Salsas</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Cebolla" data-price="500"> Cebolla (opcional) - 500</label>
+            </div>
+            <div class="ingredient">
+                <label><input type="checkbox" value="Tomate" data-price="2000"> Tomate (opcional) - 2000</label>
+            </div>
+        </div>
+        <input type="number" id="selected-product-quantity" value="1" min="1">
+        <button id="order-button" onclick="orderSelectedProduct()">Ordenar</button>
+    </div>
+</body>
+</html>
+
+
+

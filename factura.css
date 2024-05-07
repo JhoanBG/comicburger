@@ -1,0 +1,123 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+
+        }
+
+        .imagen-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        #background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Para asegurarse de que la imagen cubra todo el contenedor */
+            opacity: 0.6; /* Opacidad del 60% para la imagen */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total-row td {
+            border-top: 2px solid #333;
+            font-weight: bold;
+        }
+            
+      
+        h1 {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        th:first-child, td:first-child {
+            text-align: center;
+        }
+    
+        .header-buttons {
+            display: flex;
+            justify-content: flex-end; /* Alinear los botones a la derecha */
+            align-items: center; /* Centrar verticalmente los elementos */
+        }
+        
+        .header-buttons button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px; /* Espacio entre los botones */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .header-buttons img {
+            width: 30px; /* Tamaño de las imágenes */
+            height: auto;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #f8f8f8, #eaeaea);
+            color: rgb(248, 212, 5);
+            text-align: center;
+            padding: 20px 0;
+            opacity: 0.9;
+            }
+        /* Efecto de hover en los botones */
+        .header-buttons button:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        #factura {
+            background-color: #ffffff; /* Fondo blanco para destacar el área */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Añade espacio entre el valor a pagar y la tabla */
+            
+        }
+        
+        #factura h2 {
+            background-color: black;
+            color: #f3f705ea;
+            text-decoration: double;
+            margin-top: 0; /* Elimina el margen superior predeterminado del encabezado */
+            text-align: center;
+            opacity: 0.6;
+        }

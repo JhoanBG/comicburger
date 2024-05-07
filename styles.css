@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+    .imagen-container {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+    
+    #background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Para asegurarse de que la imagen cubra todo el contenedor */
+        opacity: 0.6; /* Opacidad del 60% para la imagen */
+    }
+    
+
+
+header {
+    background-color: #f8f8f8;
+    color: rgb(248, 212, 5);
+    text-align: center;
+    padding: 20px 0;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    color: #f8f8f8;
+    width: 45%;
+    margin-bottom: 20px;
+    
+}
+
+.product img {
+    width: 80%;
+    height: auto;
+}
+
+
+.product span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ingredients {
+    display: none;
+}
+
+
+.ingredients p {
+    margin-top: 5px;
+}
+
+/* Agrega estilos para el icono del chat */
+P {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px 0;
+    opacity: 0.6; 
+}
+
+.selected-product-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-product-container input[type="number"] {
+    width: 50px;
+}
+
+.selected-product-container button {
+    background-color: yellow;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.ingredient {
+    margin-bottom: 5px;
+}
+
+.add-ingredient-button,
+.remove-ingredient-button {
+    margin-left: 5px;
+    background-color: yellow;
+    border: none;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.header-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+.header-buttons img {
+    width: 30px; /* Tamaño de las imágenes */
+    height: auto;
+}
